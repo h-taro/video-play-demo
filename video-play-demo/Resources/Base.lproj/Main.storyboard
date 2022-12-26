@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mf3-qJ-LVd">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="WBd-AD-7px">
+            <objects>
+                <navigationController id="Mf3-qJ-LVd" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qOR-wf-mk3">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="pBX-6l-rUt" kind="relationship" relationship="rootViewController" id="NRx-b7-JrT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fXA-HH-uTK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-450" y="34"/>
+        </scene>
+        <!--Video-->
+        <scene sceneID="oZZ-Ym-2SA">
+            <objects>
+                <viewController id="pBX-6l-rUt" customClass="VideoViewController" customModule="video_play_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ga1-bs-uzD">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kwQ-fd-gkH" customClass="VideoPlayUIView" customModule="video_play_demo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ctJ-sh-BVn"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ctJ-sh-BVn" firstAttribute="trailing" secondItem="kwQ-fd-gkH" secondAttribute="trailing" id="U0k-tl-TvL"/>
+                            <constraint firstItem="kwQ-fd-gkH" firstAttribute="leading" secondItem="ctJ-sh-BVn" secondAttribute="leading" id="jxs-ED-cBh"/>
+                            <constraint firstAttribute="bottom" secondItem="kwQ-fd-gkH" secondAttribute="bottom" id="uJf-Lu-wTf"/>
+                            <constraint firstItem="kwQ-fd-gkH" firstAttribute="top" secondItem="ga1-bs-uzD" secondAttribute="top" id="zd8-Gi-HZo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Video" id="9nF-jH-Ckh"/>
+                    <connections>
+                        <outlet property="videoPlayUIView" destination="kwQ-fd-gkH" id="VV5-vB-fQN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pk4-m8-Yal" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="487.78625954198469" y="33.802816901408455"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
